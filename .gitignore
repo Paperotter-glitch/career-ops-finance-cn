@@ -1,0 +1,29 @@
+# ================================================================
+# ⚠️ 个人数据——绝不提交（本项目最重要的一条规则）
+# 只提交 *.example / *.template；真实个人文件永远留在本地。
+# ================================================================
+config/profile.yml
+cv.md
+data/
+面试准备/
+投递/
+最终简历/
+tracker.json
+tracker.*.json
+*.local.*
+.env
+.env.*
+!.env.example
+
+# 运行产物 / 缓存
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+logs/
+*.log
+
+# 系统
+.DS_Store
+.idea/
+.vscode/

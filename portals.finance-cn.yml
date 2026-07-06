@@ -1,0 +1,1104 @@
+# Finance-CN Portals — 中国 / 香港 金融行业雇主库 + 岗位筛选词典
+# 面向 career-ops 的金融垂直配置。约 134 家:信托 / 券商 / 券商系 PE / 中资投行(HK) / 公募 / 外资行 / PE-VC / AIC / 国资基金。
+# 用法:复制为 portals.yml,按你的目标城市与岗位调整 title_filter 与各公司 office_cities。
+#
+# 说明:中国内地金融业岗位多通过 BOSS 直聘 / 智联 / 猎聘 / 看准 发布;
+# 香港 / 外资岗位通常通过公司官网 + LinkedIn + JobsDB 发布。
+# 每家公司都标注了 office_cities,可据此按目标城市过滤岗位。
+
+# ============================================================
+# 标题筛选(title_filter)— 4 类核心 + 中英双语
+# ============================================================
+
+title_filter:
+  positive:
+    # ---- 投资法务 / Investment Legal ----
+    - "投资法务"
+    - "法务经理"
+    - "法务总监"
+    - "Investment Legal"
+    - "Legal Counsel"
+    - "Senior Legal Counsel"
+    - "Legal Manager"
+    - "Trust Legal"
+    - "Fund Legal"
+    - "PE Legal"
+    - "VC Legal"
+    - "信托法务"
+    - "基金法务"
+    - "投行法务"
+    # ---- 合规 / Compliance ----
+    - "合规"
+    - "合规经理"
+    - "合规总监"
+    - "Compliance"
+    - "Compliance Officer"
+    - "Compliance Manager"
+    - "Compliance Director"
+    - "Investment Compliance"
+    - "Asset Management Compliance"
+    - "AML"
+    - "Anti-Money Laundering"
+    - "反洗钱"
+    - "交易合规"
+    - "资管合规"
+    # ---- 风险管理 / Risk Management ----
+    - "风险管理"
+    - "风控"
+    - "风险经理"
+    - "市场风险"
+    - "信用风险"
+    - "操作风险"
+    - "Risk Management"
+    - "Risk Manager"
+    - "Market Risk"
+    - "Credit Risk"
+    - "Operational Risk"
+    - "Enterprise Risk"
+    - "ERM"
+    # ---- 法务产品 / Legal AI PM ----
+    - "法律 AI"
+    - "法务产品"
+    - "法律科技"
+    - "LegalTech"
+    - "RegTech"
+    - "Legal AI Product"
+    - "AI Product Manager"
+    - "法律 AI 产品经理"
+    # ---- 兼容 / 相邻岗位 ----
+    - "总法律顾问"
+    - "General Counsel"
+    - "GC"
+    - "Head of Legal"
+    - "Head of Compliance"
+
+  negative:
+    # 明确不匹配的岗位关键词
+    - "实习"
+    - "Intern"
+    - "应届"
+    - "Junior"
+    - "助理"
+    - "销售"
+    - "Sales"
+    - "BD"
+    - "市场推广"
+    - "运营"
+    - "客户经理"
+    - "前台"
+    - "出纳"
+
+  seniority_boost:
+    # 这些关键词出现,优先级提升
+    - "Senior"
+    - "Manager"
+    - "Director"
+    - "高级"
+    - "资深"
+    - "经理"
+    - "总监"
+    - "VP"
+    - "副总裁"
+
+# ============================================================
+# 雇主清单(tracked_companies)— 约 134 家
+# ============================================================
+
+tracked_companies:
+
+  # ---- 信托 ----
+  - name: "平安信托"
+    careers_url: "https://www.jobs.pingan.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["信托", "财富管理", "服务信托"]
+
+  - name: "华润信托"
+    careers_url: "https://www.crc-trust.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["信托", "央企"]
+
+  # ---- 券商资管 + 公募 ----
+  - name: "招商证券"
+    careers_url: "https://career.cmschina.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["券商", "资管", "市场风险"]
+
+  - name: "中信证券(华南 / 深圳分公司)"
+    careers_url: "https://www.cs.ecitic.com/newsite/hrzp/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["券商", "投行", "资管"]
+    notes: "总部在北京,深圳子公司 / 华南区设有岗位"
+
+  - name: "中金深圳子公司"
+    careers_url: "https://career.cicc.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["券商", "投行"]
+    notes: "总部在北京,深圳子公司设有岗位"
+
+  - name: "南方基金"
+    careers_url: "https://www.nffund.com/main/aboutNF/recruit/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["公募基金", "深圳总部"]
+
+  # ---- 金融集团 / 银行私行 / 保险 ----
+  - name: "平安集团"
+    careers_url: "https://pingan.zhiye.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["综合金融", "集团总部"]
+
+  - name: "招商银行私人银行"
+    careers_url: "https://career.cmbchina.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["私行", "财富管理"]
+
+  - name: "平安人寿"
+    careers_url: "https://pingan.zhiye.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["保险", "保险金信托源头"]
+
+  - name: "招商局集团"
+    careers_url: "https://www.cmhk.com/main/c_zp/"
+    office_cities: ["深圳", "香港"]
+    enabled: true
+    tags: ["央企", "综合", "招商系"]
+
+  # ---- PE / VC ----
+  - name: "深创投"
+    careers_url: "https://www.szvc.com.cn/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["国资 VC", "深圳"]
+
+  - name: "达晨财智"
+    careers_url: "https://www.fortunevc.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["VC", "深圳总部"]
+
+  - name: "东方富海"
+    careers_url: "https://www.oceanpine.com.cn/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["PE / VC", "深圳"]
+
+  # ---- 法律 AI ----
+  - name: "大疆 - 法律 AI 产品"
+    careers_url: "https://we.dji.com/zh-CN/job"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["法律 AI PM", "深圳"]
+
+  - name: "腾讯 - 法务 / 合规 / 法律 AI"
+    careers_url: "https://careers.tencent.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["互联网大厂", "深圳总部"]
+
+  # ---- 外资银行(香港)----
+  - name: "HSBC 汇丰(香港 / 深圳)"
+    careers_url: "https://www.hsbc.com/careers/where-we-hire/china"
+    office_cities: ["香港", "深圳"]
+    enabled: true
+    tags: ["外资银行", "外资"]
+
+  - name: "Standard Chartered 渣打(香港 / 深圳)"
+    careers_url: "https://www.sc.com/en/careers/"
+    office_cities: ["香港", "深圳"]
+    enabled: true
+    tags: ["外资银行"]
+
+  - name: "中银香港 BOCHK"
+    careers_url: "https://www.bochk.com/sc/aboutus/careers.html"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["中资海外", "香港"]
+
+  - name: "中银国际"
+    careers_url: "https://www.bocigroup.com/careers/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["港资", "中资海外"]
+
+  - name: "工银亚洲"
+    careers_url: "https://www.icbcasia.com/ICBC/海外分行/工银亚洲网站/CH/AboutUs/Career/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["港资", "中资海外"]
+
+  - name: "招商永隆银行"
+    careers_url: "https://www.cmbwinglungbank.com/wlbweb/jsp/career/"
+    office_cities: ["香港", "深圳"]
+    enabled: true
+    tags: ["港资", "招商系"]
+
+  # ---- 保险 / 资管(香港)----
+  - name: "AIA Hong Kong 友邦香港"
+    careers_url: "https://www.aia.com.hk/zh-hk/careers.html"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["保险", "香港"]
+
+  - name: "宏利保险 Manulife(香港)"
+    careers_url: "https://www.manulife.com/careers"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["保险", "外资"]
+
+  - name: "保诚保险 Prudential(香港)"
+    careers_url: "https://www.prudential.com.hk/zh-hant/careers/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["保险", "外资"]
+
+  # ---- 中资海外券商 / 投行(香港)----
+  - name: "中信证券国际(香港)"
+    careers_url: "https://www.citicsifg.com/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["券商", "中资海外"]
+
+  - name: "中金香港"
+    careers_url: "https://career.cicc.com/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["券商", "中资海外"]
+
+  - name: "海通国际(香港)"
+    careers_url: "https://www.htisec.com/zh-CN/career"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["券商", "中资海外"]
+
+  # ---- 中资海外资管 / 港资 PE / VC ----
+  - name: "嘉实国际 Harvest Global Investments / HGI"
+    careers_url: "https://www.harvestglobal.com.hk/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["资管", "中资海外", "SFC 1+4+9 持牌", "Pre-IPO"]
+
+  - name: "红杉中国香港 Sequoia China HK"
+    careers_url: "https://www.sequoiacap.cn/careers/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["PE / VC", "顶级", "外资"]
+
+  - name: "上海璞弛(猎头公司,非终端雇主)"
+    careers_url: "https://www.liepin.com/a/74797667.shtml"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["猎头公司", "家办基金法务", "type:recruiter_company"]
+    notes: "此条 type 是 recruiter_company,不是终端雇主"
+
+  # ============================================================
+  # 第 1 类:券商系私募(9 家)
+  # ============================================================
+
+  - name: "招商致远资本(招商证券旗下 PE)"
+    careers_url: "https://www.cmsc-pe.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["券商系 PE", "招商系", "深圳"]
+    notes: "招商证券全资 PE 子公司,母基金 + 直投 + 并购"
+
+  - name: "金石投资(中信证券股权投资)"
+    careers_url: "https://www.citics-jinshi.com/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["券商系 PE", "中信系", "PE 直投"]
+    notes: "中信证券股权投资旗舰平台"
+
+  - name: "国信弘盛(国信证券旗下)"
+    careers_url: "https://www.guosenhongsheng.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["券商系 PE", "国信系"]
+    notes: "国信证券 PE 子公司,深圳本地化优势"
+
+  - name: "国君创投(国泰君安创投)"
+    careers_url: "https://www.gtjavc.com/"
+    office_cities: ["深圳", "上海"]
+    enabled: true
+    tags: ["券商系 PE", "国泰君安系"]
+
+  - name: "海通创新资本(海通证券旗下)"
+    careers_url: "https://www.htsec.com/"
+    office_cities: ["深圳", "香港"]
+    enabled: true
+    tags: ["券商系 PE", "海通系", "跨境"]
+
+  - name: "华泰紫金投资(华泰证券旗下)"
+    careers_url: "https://www.htsc.com.cn/"
+    office_cities: ["深圳", "香港"]
+    enabled: true
+    tags: ["券商系 PE", "华泰系", "PE + 资管"]
+
+  - name: "平安证券资管(平安证券旗下)"
+    careers_url: "https://stock.pingan.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["券商系", "平安系", "资管"]
+    notes: "平安证券独立资管平台"
+
+  - name: "中信里昂证券 CLSA"
+    careers_url: "https://www.clsa.com/careers/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["券商", "中资海外", "投行"]
+
+  - name: "银河国际(银河证券香港子公司)"
+    careers_url: "https://www.chinastock.com.hk/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["券商", "中资海外", "香港"]
+
+  # ============================================================
+  # 第 2 类:银行系私募(9 家)
+  # ============================================================
+
+  - name: "招银国际 CMB International(招商银行海外旗舰)"
+    careers_url: "https://www.cmbi.com.hk/career/"
+    office_cities: ["香港", "深圳"]
+    enabled: true
+    tags: ["银行系 PE", "招商系", "中资海外投行 + PE"]
+    notes: "招商银行海外旗舰投行,PE/VC + 投行 + 资管,深港跨境业务核心"
+
+  - name: "工银国际 ICBC International"
+    careers_url: "https://www.icbci.icbc.com.cn/icbci/en/career/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["银行系 PE", "工银系", "中资海外投行"]
+
+  - name: "建银国际 CCBI"
+    careers_url: "https://www.ccbintl.com.hk/English/join.html"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["银行系 PE", "建行系", "中资海外投行"]
+
+  - name: "农银国际 ABCI"
+    careers_url: "https://www.abci.com.hk/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["银行系", "农行系", "中资海外"]
+
+  - name: "交银国际 BoCom International"
+    careers_url: "https://www.bocomgroup.com/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["银行系", "交行系", "中资海外投行"]
+
+  - name: "浦银国际控股(浦发银行海外)"
+    careers_url: "https://www.spdbintl.com/"
+    office_cities: ["深圳", "香港"]
+    enabled: true
+    tags: ["银行系", "浦发系", "中资海外"]
+
+  - name: "平安银行投行部"
+    careers_url: "https://bank.pingan.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["银行系", "平安系", "投行业务"]
+
+  - name: "中信资本 CITIC Capital(顶级中资 PE)"
+    careers_url: "https://www.citiccapital.com/careers/"
+    office_cities: ["香港", "北京", "深圳"]
+    enabled: true
+    tags: ["银行系 PE", "中信系", "顶级中资 PE"]
+    notes: "中信集团旗下顶级 PE,跨境投资 + 并购 + 资管全栈"
+
+  - name: "HSBC GBM Private Equity"
+    careers_url: "https://www.hsbc.com/careers/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["外资银行 PE", "外资", "PQE 门槛"]
+    notes: "外资银行 PE,通常要求 PQE 律师资格"
+
+  # ============================================================
+  # 第 3 类:公募系私募(9 家)
+  # ============================================================
+
+  - name: "嘉实基金 Harvest Fund"
+    careers_url: "https://www.jsfund.cn/main/AboutHarvest/JoinUs/index.shtml"
+    office_cities: ["北京", "深圳", "上海"]
+    enabled: true
+    tags: ["公募 + 另类", "嘉实系"]
+    notes: "旗下含嘉实国际 HGI 等海外平台"
+
+  - name: "易方达基金(深圳总部)"
+    careers_url: "https://www.efunds.com.cn/recruit/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["公募 + 另类", "深圳头部"]
+    notes: "公募头部,深圳总部"
+
+  - name: "博时基金(深圳总部)"
+    careers_url: "https://www.bosera.com/job/index.htm"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["公募 + 另类", "招商系"]
+
+  - name: "招商基金(深圳总部)"
+    careers_url: "https://www.cmfchina.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["公募 + 另类", "招商系"]
+
+  - name: "鹏华基金(深圳总部)"
+    careers_url: "https://www.phfund.com.cn/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["公募 + 另类", "国信系"]
+
+  - name: "南方资本(南方基金旗下另类)"
+    careers_url: "https://www.nffund.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["公募系另类", "南方系"]
+    notes: "南方基金全资另类投资子公司"
+
+  - name: "博时资本(博时旗下另类)"
+    careers_url: "https://www.bsam.com.cn/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["公募系另类", "博时系"]
+
+  - name: "易方达资产管理 HK"
+    careers_url: "https://www.efundhk.com/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["公募 HK", "易方达系", "中资海外"]
+
+  - name: "华夏基金(香港)"
+    careers_url: "https://www.chinaamc.com.hk/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["公募 HK", "华夏系", "中资海外"]
+
+  # ============================================================
+  # 第 4 类:国资委体系 / 央企私募(10 家)
+  # ============================================================
+
+  - name: "国新基金深圳分部"
+    careers_url: "https://www.guoxinguotong.com/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["央企 PE", "国新系"]
+
+  - name: "国新国际(国新海外平台)"
+    careers_url: "https://www.guoxinguotong.com/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["央企 PE 海外", "国新系"]
+    notes: "国新海外平台,跨境业务"
+
+  - name: "国调基金(国家级产业基金,半导体 / 集成电路 / 先进制造)"
+    careers_url: "https://www.guodiao.com/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["国家级产业基金", "央企", "半导体 + 战新"]
+    notes: "国家半导体大基金的母基金管理人"
+
+  - name: "中投公司海外(China Investment Corporation)"
+    careers_url: "https://www.china-inv.cn/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["主权基金", "央企", "门槛极高"]
+    notes: "主权基金海外平台,门槛极高"
+
+  - name: "三峡资本(三峡集团旗下 PE)"
+    careers_url: "https://www.ctgcapital.cn/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["央企 PE", "能源系"]
+
+  - name: "国家集成电路产业基金深圳办(大基金)"
+    careers_url: "https://www.gjjcdlcyjj.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["国家级产业基金", "半导体", "央企"]
+
+  - name: "诚通基金(中国诚通)"
+    careers_url: "https://www.chengtong.cn/"
+    office_cities: ["北京", "深圳"]
+    enabled: true
+    tags: ["央企 PE", "并购重组"]
+
+  - name: "国投创新(国家开发投资集团)"
+    careers_url: "https://www.sdic.com.cn/"
+    office_cities: ["北京", "深圳"]
+    enabled: true
+    tags: ["央企 PE", "战略投资"]
+
+  - name: "五矿资本(中国五矿)"
+    careers_url: "https://www.minmetalscapital.com/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["央企 PE", "矿业 + 资源"]
+
+  - name: "中信集团(深港产业投资)"
+    careers_url: "https://www.citic.com/"
+    office_cities: ["香港", "深圳", "北京"]
+    enabled: true
+    tags: ["央企", "中信系", "综合金融控股"]
+    notes: "区别于中信证券,中信集团母公司本身的产业投资条线"
+
+  # ============================================================
+  # 第 5 类:深圳地方私募(7 家)
+  # ============================================================
+
+  - name: "深圳市引导基金 / 鲲鹏资本"
+    careers_url: "https://www.kunpengcapital.cn/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["政府引导基金", "深圳地方", "母基金"]
+    notes: "深圳市政府引导基金核心管理人"
+
+  - name: "深圳市投控(深圳市投资控股)"
+    careers_url: "https://www.szic.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["深圳国资", "市级投资平台"]
+
+  - name: "远致投资(深圳市国资委直属)"
+    careers_url: "https://www.shum-yip.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["深圳国资", "市国资委直属"]
+
+  - name: "高新投(深圳高新投集团)"
+    careers_url: "https://www.szhti.com.cn/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["深圳国资", "高科技投资"]
+
+  - name: "红土创投(深创投系)"
+    careers_url: "https://www.szvc.com.cn/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["深圳国资 VC", "深创投系"]
+
+  - name: "前海管理局相关基金"
+    careers_url: "https://www.szqh.gov.cn/"
+    office_cities: ["深圳前海"]
+    enabled: true
+    tags: ["深圳国资", "前海政策性"]
+
+  - name: "深圳市重大产业基金"
+    careers_url: "https://www.szic.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["深圳国资", "战略产业"]
+
+  # ============================================================
+  # 第 6 类:民营市场化私募(10 家)
+  # ============================================================
+
+  - name: "高瓴 Hillhouse"
+    careers_url: "https://www.hillhouseinv.com/careers/"
+    office_cities: ["香港", "北京", "深圳"]
+    enabled: true
+    tags: ["顶级民营 PE"]
+    notes: "顶级民营 PE,跨境业务多"
+
+  - name: "君联资本 Legend Capital(联想系)"
+    careers_url: "https://www.legendcapital.com.cn/"
+    office_cities: ["北京", "深圳", "香港"]
+    enabled: true
+    tags: ["民营 PE/VC", "联想系"]
+
+  - name: "鼎晖投资 CDH"
+    careers_url: "https://www.cdhfund.com/"
+    office_cities: ["北京", "深圳", "香港"]
+    enabled: true
+    tags: ["顶级民营 PE"]
+
+  - name: "博裕资本 Boyu Capital"
+    careers_url: "https://www.boyucapital.com/"
+    office_cities: ["香港", "北京"]
+    enabled: true
+    tags: ["顶级民营 PE"]
+
+  - name: "IDG Capital"
+    careers_url: "https://www.idgcapital.com/careers/"
+    office_cities: ["香港", "北京", "深圳"]
+    enabled: true
+    tags: ["顶级 VC/PE"]
+
+  - name: "基石资本(深圳)"
+    careers_url: "https://www.cornerstonecapital.com.cn/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["民营 PE", "深圳"]
+
+  - name: "同创伟业(深圳)"
+    careers_url: "https://www.tcvinvest.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["民营 VC", "深圳"]
+
+  - name: "松禾资本(深圳)"
+    careers_url: "https://www.songhecapital.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["民营 VC", "深圳"]
+
+  - name: "启明创投 Qiming Venture Partners"
+    careers_url: "https://www.qimingvc.com/"
+    office_cities: ["北京", "上海", "香港"]
+    enabled: true
+    tags: ["民营 VC", "顶级"]
+
+  - name: "经纬中国 Matrix Partners"
+    careers_url: "https://www.matrixpartners.com.cn/"
+    office_cities: ["北京", "香港", "深圳"]
+    enabled: true
+    tags: ["民营 VC", "顶级"]
+
+  # ============================================================
+  # 第 7 类:外资私募(8 家)
+  # ============================================================
+
+  - name: "KKR Hong Kong"
+    careers_url: "https://www.kkr.com/careers"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["外资顶级 PE", "PQE 门槛"]
+    notes: "外资顶级 PE,通常要求 PQE + 顶级律所背景"
+
+  - name: "Carlyle 凯雷(香港)"
+    careers_url: "https://www.carlyle.com/careers"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["外资顶级 PE", "PQE 门槛"]
+
+  - name: "Blackstone 黑石(香港)"
+    careers_url: "https://www.blackstone.com/careers/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["外资顶级 PE", "PQE 门槛"]
+
+  - name: "Bain Capital 贝恩资本(香港)"
+    careers_url: "https://www.baincapital.com/careers"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["外资顶级 PE", "PQE 门槛"]
+
+  - name: "TPG(香港)"
+    careers_url: "https://www.tpg.com/careers"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["外资顶级 PE", "PQE 门槛"]
+
+  - name: "Warburg Pincus 华平(香港 / 深圳)"
+    careers_url: "https://warburgpincus.com/careers/"
+    office_cities: ["香港", "深圳"]
+    enabled: true
+    tags: ["外资顶级 PE", "PQE 门槛"]
+
+  - name: "General Atlantic(香港)"
+    careers_url: "https://www.generalatlantic.com/careers/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["外资顶级 PE", "PQE 门槛"]
+
+  - name: "BlackRock 贝莱德(香港)"
+    careers_url: "https://careers.blackrock.com/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["外资资管巨头", "门槛高"]
+
+  # ============================================================
+  # 第 8 类:信托公司(4 家深圳分部)
+  # ============================================================
+
+  - name: "中信信托深圳分部"
+    careers_url: "https://www.citictrust.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["信托", "中信系", "深圳分部"]
+    notes: "中信信托深圳分部,信托业务全国第一梯队"
+
+  - name: "中海信托深圳分部"
+    careers_url: "https://www.shctrust.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["信托", "中海系", "深圳分部"]
+
+  - name: "建信信托深圳分部"
+    careers_url: "https://www.ccbtrust.com.cn/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["信托", "建行系", "深圳分部"]
+    notes: "建行系信托,与建信投资 AIC 协同"
+
+  - name: "重庆信托深圳分部"
+    careers_url: "https://www.chongqingtrust.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["信托", "深圳分部"]
+
+  # ============================================================
+  # 第 9 类:产业投资方 / CVC(8 家)
+  # ============================================================
+
+  - name: "腾讯投资 Tencent Investment(独立于腾讯法务)"
+    careers_url: "https://www.tencent.com/zh-cn/careers.html"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["CVC", "互联网战投", "腾讯系"]
+    notes: "腾讯投资部独立条线,与法务岗不同"
+
+  - name: "华为哈勃投资(半导体产业基金)"
+    careers_url: "https://career.huawei.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["CVC", "半导体", "华为系"]
+    notes: "华为半导体产业基金"
+
+  - name: "比亚迪战投"
+    careers_url: "https://www.bydglobal.com/cn/JoinByd.html"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["CVC", "新能源汽车", "比亚迪系"]
+
+  - name: "顺丰投资"
+    careers_url: "https://www.sf-express.com/cn/sc/careers/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["CVC", "物流", "顺丰系"]
+
+  - name: "联想创投深圳分部"
+    careers_url: "https://www.legendcapital.com.cn/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["CVC", "联想系"]
+
+  - name: "小米战投深圳分部"
+    careers_url: "https://hr.xiaomi.com/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["CVC", "小米系"]
+
+  - name: "中兴投资"
+    careers_url: "https://www.zte.com.cn/china/about/recruitment.html"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["CVC", "通信", "中兴系"]
+
+  - name: "TCL 创投 / 半导体基金"
+    careers_url: "https://www.tcl.com/cn/zh/careers"
+    office_cities: ["深圳", "惠州"]
+    enabled: true
+    tags: ["CVC", "显示 + 半导体", "TCL 系"]
+
+  # ============================================================
+  # 第 10 类:AIC 金融资产投资公司(6 家)— 2024 扩大股权投资试点
+  # ============================================================
+
+  - name: "工银投资深圳分公司(工银金融资产投资)"
+    careers_url: "https://www.icbc.com.cn/icbc/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["AIC", "工行系", "债转股 + 股权投资"]
+    notes: "AIC 三巨头之一"
+
+  - name: "农银投资深圳分公司(农银金融资产投资)"
+    careers_url: "https://www.abchina.com/cn/HumanResources/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["AIC", "农行系", "债转股 + 股权投资"]
+
+  - name: "中银资产深圳分公司(中银金融资产投资)"
+    careers_url: "https://www.boc.cn/aboutboc/ab8/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["AIC", "中行系", "债转股 + 股权投资"]
+
+  - name: "建信投资深圳分公司(建信金融资产投资)"
+    careers_url: "https://www.ccb.com/cn/v3/include/aboutus/recruitment_/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["AIC", "建行系", "债转股 + 股权投资"]
+    notes: "AIC 三巨头(规模最大),与建银国际 HK + 建信信托 协同"
+
+  - name: "交银投资深圳分公司(交银金融资产投资)"
+    careers_url: "https://www.bankcomm.com/BankCommSite/shtml/jyzh/cn/7773/list.shtml"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["AIC", "交行系", "债转股 + 股权投资"]
+
+  - name: "中信金投深圳分公司(2024 新获批 AIC)"
+    careers_url: "https://www.citicbank.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["AIC", "中信系", "2024 新机构"]
+    notes: "2024 年第 6 家获批 AIC,处于新班子搭建期"
+
+  # ============================================================
+  # 第 11 类:保险资管系(5 家深圳)
+  # ============================================================
+
+  - name: "平安资产管理(深圳总部)"
+    careers_url: "https://www.pingan.com/careers/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["保险资管", "平安系"]
+    notes: "平安资管深圳总部,与平安信托 / 平安银行投行部 协同"
+
+  - name: "人保资产深圳分公司"
+    careers_url: "https://www.picc.com/recruit/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["保险资管", "人保系"]
+
+  - name: "国寿安保资管深圳分公司"
+    careers_url: "https://www.cgbac.cn/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["保险资管", "国寿系"]
+
+  - name: "太保资产深圳分公司"
+    careers_url: "https://www.cpic.com.cn/careers/"
+    office_cities: ["深圳", "上海"]
+    enabled: true
+    tags: ["保险资管", "太保系"]
+
+  - name: "泰康资产深圳分公司"
+    careers_url: "https://www.taikang.com/talent/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["保险资管", "泰康系"]
+
+  # ============================================================
+  # 第 12 类:家办 / 私行扩展(6 家)
+  # ============================================================
+
+  - name: "平安海外控股(深圳 + HK)"
+    careers_url: "https://www.pingan.com/"
+    office_cities: ["深圳", "香港"]
+    enabled: true
+    tags: ["家办", "私行", "平安系", "跨境"]
+
+  - name: "工银私人银行深圳分行"
+    careers_url: "https://www.icbc.com.cn/icbc/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["私行", "工行系"]
+
+  - name: "建行私人银行深圳分行"
+    careers_url: "https://www.ccb.com/cn/v3/include/aboutus/recruitment_/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["私行", "建行系"]
+
+  - name: "HSBC Private Banking HK"
+    careers_url: "https://www.hsbc.com/careers/where-we-hire/asia-pacific/hong-kong-sar"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["私行", "外资", "HK"]
+
+  - name: "UBS Wealth Management HK"
+    careers_url: "https://www.ubs.com/global/en/careers.html"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["私行", "瑞士外资", "HK"]
+
+  - name: "Pictet 瑞士百达(香港)"
+    careers_url: "https://www.group.pictet/careers"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["私行", "瑞士外资", "高净值老牌"]
+
+  - name: "BNP Paribas Wealth Management HK"
+    careers_url: "https://group.bnpparibas/en/careers"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["私行", "法资", "HK"]
+
+  - name: "Bank of Singapore HK(新加坡华侨银行旗下)"
+    careers_url: "https://www.bankofsingapore.com/careers.html"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["私行", "新加坡资", "HK"]
+
+  # ============================================================
+  # 第 13 类:REITs / 房地产基金(7 家)
+  # ============================================================
+
+  - name: "招商蛇口资管(招商系地产资管)"
+    careers_url: "https://www.cmsk1979.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["REITs", "地产基金", "招商系"]
+
+  - name: "华润置地资管(华润系)"
+    careers_url: "https://www.crland.com.hk/"
+    office_cities: ["深圳", "香港"]
+    enabled: true
+    tags: ["REITs", "地产基金", "华润系"]
+
+  - name: "万科 BU / 万科基金"
+    careers_url: "https://hr.vanke.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["REITs", "地产基金", "万科系"]
+
+  - name: "平安不动产"
+    careers_url: "https://www.pingan.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["REITs", "地产基金", "平安系"]
+
+  - name: "中海地产资管深圳分部"
+    careers_url: "https://www.coli.com.hk/"
+    office_cities: ["深圳", "香港"]
+    enabled: true
+    tags: ["REITs", "地产基金", "中海系"]
+
+  - name: "领展房产基金 Link REIT(HK 最大 REITs)"
+    careers_url: "https://www.linkreit.com/en/careers/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["REITs", "HK 最大", "外资 / 港资"]
+    notes: "香港最大 REITs,跨境物业组合"
+
+  - name: "越秀房产信托(HK 上市)"
+    careers_url: "https://www.yuexiureit.com/"
+    office_cities: ["香港", "广州"]
+    enabled: true
+    tags: ["REITs", "广州国资系", "HK 上市"]
+
+  # ============================================================
+  # 第 14 类:政府引导基金 / 国家级母基金(4 家)
+  # ============================================================
+
+  - name: "深圳市天使母基金"
+    careers_url: "https://www.szangelfof.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["政府引导基金", "深圳", "母基金"]
+
+  - name: "深圳市 VC/PE 引导基金"
+    careers_url: "https://www.szic.com/"
+    office_cities: ["深圳"]
+    enabled: true
+    tags: ["政府引导基金", "深圳", "母基金"]
+
+  - name: "国家中小企业发展基金深圳办"
+    careers_url: "https://www.smefoundation.cn/"
+    office_cities: ["深圳", "北京"]
+    enabled: true
+    tags: ["国家级母基金", "中小企业"]
+
+  - name: "香港特区政府投资基金 HKIC(Hong Kong Investment Corporation)"
+    careers_url: "https://www.hkic.hk/"
+    office_cities: ["香港"]
+    enabled: true
+    tags: ["政府投资基金", "HK 主权", "2024 新成立"]
+    notes: "2024 年新成立的香港特区政府投资基金,定位类似新加坡 GIC,正在搭建团队"
+
+# ============================================================
+# 搜索查询(search_queries)— 招聘平台 site: 过滤
+# ============================================================
+
+search_queries:
+  # 建议为每条搜索加上目标城市过滤(如 "深圳" / "香港" / "Hong Kong" / "Shenzhen")
+
+  # ---- BOSS 直聘 ----
+  - query: "site:zhipin.com 投资法务 深圳"
+    description: "BOSS - 深圳投资法务"
+
+  - query: "site:zhipin.com 合规经理 信托 深圳"
+    description: "BOSS - 深圳信托合规"
+
+  - query: "site:zhipin.com 风险管理 资管 深圳"
+    description: "BOSS - 深圳资管风控"
+
+  - query: "site:zhipin.com 法务 香港"
+    description: "BOSS - 香港法务"
+
+  # ---- 猎聘 ----
+  - query: "site:liepin.com 投资法务 深圳"
+    description: "猎聘 - 深圳投资法务"
+
+  - query: "site:liepin.com 法务总监 信托 深圳"
+    description: "猎聘 - 深圳信托法务总监"
+
+  - query: "site:liepin.com 合规总监 券商 深圳"
+    description: "猎聘 - 深圳券商合规总监"
+
+  - query: "site:liepin.com 信托法务 香港 OR Hong Kong"
+    description: "猎聘 - 香港信托法务"
+
+  # ---- 拉勾 / 看准 / 智联 ----
+  - query: "site:lagou.com 法律 AI 产品经理 深圳"
+    description: "拉勾 - 深圳法律 AI PM"
+
+  - query: "site:kanzhun.com 法务经理 信托 深圳"
+    description: "看准 - 深圳信托法务"
+
+  - query: "site:zhaopin.com 投资法务 深圳"
+    description: "智联 - 深圳投资法务"
+
+  # ---- LinkedIn 香港 / 跨境 ----
+  - query: "site:linkedin.com/jobs Investment Legal Hong Kong"
+    description: "LinkedIn - 香港投资法务"
+
+  - query: "site:linkedin.com/jobs Trust Legal Hong Kong"
+    description: "LinkedIn - 香港信托法务"
+
+  - query: "site:linkedin.com/jobs Investment Compliance Hong Kong"
+    description: "LinkedIn - 香港投资合规"
+
+  - query: "site:linkedin.com/jobs Legal Counsel Shenzhen"
+    description: "LinkedIn - 深圳 Legal Counsel"
+
+  - query: "site:linkedin.com/jobs Risk Management Hong Kong"
+    description: "LinkedIn - 香港风险管理"
+
+  # ---- 香港本地平台 ----
+  - query: "site:jobsdb.com 合规 香港"
+    description: "JobsDB - 香港合规"
+
+  - query: "site:jobsdb.com Trust Legal Hong Kong"
+    description: "JobsDB - 香港信托法务"
+
+  - query: "site:cpjobs.com Legal Compliance"
+    description: "CPJobs - 香港法律合规"
+
+  - query: "site:efinancialcareers.hk Legal Compliance"
+    description: "eFinancialCareers HK - 法律合规"
+
+  # ---- 公司直招 ----
+  - query: "site:zhiye.pingan.com 法务 深圳"
+    description: "平安招聘 - 深圳法务"
+
+  - query: "site:career.cmschina.com 风险管理"
+    description: "招商证券 - 风险管理"
+
+  - query: "site:we.dji.com 法律 AI"
+    description: "大疆 - 法律 AI"
+
+  - query: "site:hsbc.com/careers 合规 OR Legal 香港"
+    description: "HSBC - 香港合规 / 法务"
+
+  - query: "site:sc.com/careers Legal Compliance Hong Kong"
+    description: "渣打 - 香港法律合规"
+
+  # ---- 通用兜底 ----
+  - query: "信托法务 深圳 招聘 2026"
+    description: "通用 - 深圳信托法务"
+
+  - query: "Trust Legal Hong Kong 2026"
+    description: "通用 - 香港信托法务"
+
+  - query: "投资合规 资管 招聘 深圳 OR 香港"
+    description: "深港投资合规"

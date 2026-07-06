@@ -1,0 +1,58 @@
+name: 🏢 补充 / 修正一家机构
+description: 提名一家该收录的金融机构，或修正现有条目（非技术背景也能提）
+title: "[机构] "
+labels: ["data", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: 感谢补充！填下面几项即可，我们来落库。**请只填公开信息**，别写个人化内容。
+  - type: input
+    id: name
+    attributes:
+      label: 机构名称
+      placeholder: 例：某某资本 / XX 基金 / XX 信托
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 类别
+      options:
+        - 券商系私募
+        - 银行系私募
+        - 公募系私募
+        - 国资 / 央企私募
+        - 深圳地方私募
+        - 民营市场化私募
+        - 外资私募
+        - 信托公司
+        - 产业投资 / CVC
+        - AIC 金融资产投资
+        - 保险资管系
+        - 家办 / 私行
+        - REITs / 地产基金
+        - 政府引导 / 母基金
+        - 其他（在说明里注明）
+    validations:
+      required: true
+  - type: input
+    id: careers_url
+    attributes:
+      label: 招聘页 / 官网链接
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: cities
+    attributes:
+      label: 办公城市
+      placeholder: 例：深圳、香港
+  - type: input
+    id: source
+    attributes:
+      label: 来源链接（可核验 —— 官网 / 监管公示 / 牌照页）
+      placeholder: https://...
+  - type: textarea
+    id: notes
+    attributes:
+      label: 补充说明（可选）

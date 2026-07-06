@@ -1,0 +1,37 @@
+name: 🎉 我上岸了 / 分享面经
+description: 用它找到工作、或攒了金融面经？分享给下一个人（可完全匿名）
+title: "[上岸] "
+labels: ["story"]
+body:
+  - type: markdown
+    attributes:
+      value: 感谢分享！**可以完全匿名**，不用透露真实身份或点名具体机构。你的一条经验就是别人的信心。
+  - type: dropdown
+    id: role
+    attributes:
+      label: 岗位方向
+      options:
+        - 投资法务 / 合规
+        - 投资 / 研究
+        - 投行
+        - 风控 / 中后台
+        - 其他
+  - type: dropdown
+    id: firm_type
+    attributes:
+      label: 机构类型（不用点名具体公司）
+      options:
+        - 券商 / 券商资管
+        - 公募 / 资管
+        - PE / VC
+        - 信托
+        - 外资行 / 香港
+        - 其他
+  - type: textarea
+    id: how
+    attributes:
+      label: 你怎么用它的 / 哪一步最有帮助
+  - type: textarea
+    id: tips
+    attributes:
+      label: 给后来人的一句建议（可选）

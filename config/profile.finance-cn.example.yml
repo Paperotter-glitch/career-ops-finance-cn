@@ -1,0 +1,76 @@
+# Career-Ops Finance-CN — Profile 模板（金融法律 / 合规方向示例）
+# 复制为 config/profile.yml 再填你自己的信息。所有 mode 共用的个人数据单一真相源。
+# ⚠️ 下面人物纯属虚构,仅示范"金融从业者怎么填",不含任何真实个人信息。
+# 结构对齐 career-ops 上游 profile schema（含 location / cv / cover_letter 段）。
+
+candidate:
+  full_name: "示例·李 / Li Example"
+  email: "you@example.com"
+  phone: "+86 1XX XXXX XXXX"
+  wechat: ""                          # 中国金融招聘常用微信,按需填(空则不用)
+  location: "深圳 / 香港（主投目标地）"
+  linkedin: "linkedin.com/in/your-id"
+  portfolio_url: ""
+  github: ""
+  photo: ""                           # 香港/外资岗可选证件照;内地 ATS 一般不放,留空
+
+target_roles:
+  # 北极星:你要主攻的岗位（此处为金融法律/合规示例）
+  primary:
+    - "投资法务 / Investment Legal"
+    - "合规 / Compliance"
+  archetypes:
+    - name: "投资法务 / Investment Legal Counsel"
+      level: "Senior / Manager"
+      fit: "primary"        # primary=主攻, secondary=良配, adjacent=够一够
+    - name: "合规经理 / Compliance Manager"
+      level: "Senior / Manager"
+      fit: "primary"
+    - name: "风险管理 / Risk Management"
+      level: "Manager"
+      fit: "secondary"
+    # —— B 阶段（泛金融）可解注扩展 ——
+    # - name: "投资经理 / Investment Manager"
+    #   fit: "adjacent"
+    # - name: "行业研究 / Equity Research"
+    #   fit: "adjacent"
+
+narrative:
+  headline: "N 年金融法律 / 合规,PE·信托·资管交易审核实战"   # 一句话职业定位
+  exit_story: "（你的差异化故事——为什么是你,一句话）"
+  superpowers:
+    - "复杂交易法律审核（PE / VC / 信托 / 资管）"
+    - "合规体系搭建与风险项目处置"
+    - "中英双语法律文书与谈判"
+  proof_points:
+    - name: "（代表项目 1）"
+      hero_metric: "（可量化成果,如:主办 N 起交易 / 涉及金额 / 落地结果）"
+    - name: "（代表项目 2）"
+      hero_metric: ""
+
+compensation:
+  target_range: "（目标总包,如 60-90 万 RMB）"
+  currency: "RMB"
+  minimum: "（底线数字）"
+  location_flexibility: "深圳 / 香港,可迁移"
+
+location:
+  country: "中国"
+  city: "深圳"
+  timezone: "GMT+8"
+  visa_status: "无需 sponsor"          # 投香港岗且需身份的,改成"需/不需香港工作签"
+  # 投香港岗常用:
+  # onsite_availability: "可常驻香港"
+
+cv:
+  output_format: "html"                # "html"（默认）或 "latex"
+
+cover_letter:
+  notice_period_days: 30               # 离职通知期(天);JD 要求即时到岗时用作默认值
+  primary_domain: "金融法律 / 合规"      # 你当前领域,用于识别与 JD 的领域差
+  # 中英求职一般不需要;投小语种外资岗再加 language_learning
+
+# —— 中国平台相关（可选）——
+# BOSS 直聘"打招呼"有 150 字上限,career-ops 的 greeting 会据此裁剪:
+# outreach:
+#   greeting_max_chars: 150
