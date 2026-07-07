@@ -3,6 +3,9 @@ name: 校验雇主库
 on:
   pull_request:
     paths: ["portals.finance-cn.yml", "scripts/check_portals.py"]
+  push:
+    branches: ["main"]
+    paths: ["portals.finance-cn.yml", "scripts/check_portals.py"]
   schedule:
     - cron: "0 0 * * 1"   # 每周一 UTC 00:00 定时体检死链
   workflow_dispatch: {}
@@ -10,11 +13,15 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install pyyaml
-      - name: Schema + 死链校验
-        run: python scripts/check_portals.py --links
+      - name: Schema 校验
+        run: python scripts/check_portals.py
+      - name: 死链校验
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: python scripts/check_portals.py --links --timeout 5
