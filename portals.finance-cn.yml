@@ -5,6 +5,8 @@
 # 说明:中国内地金融业岗位多通过 BOSS 直聘 / 智联 / 猎聘 / 看准 发布;
 # 香港 / 外资岗位通常通过公司官网 + LinkedIn + JobsDB 发布。
 # 每家公司都标注了 office_cities,可据此按目标城市过滤岗位。
+# 2026-10-21 核过一轮招聘链接，记录在 docs/link-audit-2026-10-21.md。
+# enabled: false 表示当时没核到可用官方链接，条目保留，career-ops 扫描会跳过。
 
 # ============================================================
 # 标题筛选(title_filter)— 4 类核心 + 中英双语
@@ -108,10 +110,11 @@ tracked_companies:
 
   # ---- 信托 ----
   - name: "平安信托"
-    careers_url: "https://www.jobs.pingan.com/"
+    careers_url: "https://talent.pingan.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["信托", "财富管理", "服务信托"]
+    notes: "2026-10-21：原 www.jobs.pingan.com 无 A 记录。改为平安公开招聘站 talent.pingan.com（平安自己的说明页所载）。"
 
   - name: "华润信托"
     careers_url: "https://www.crc-trust.com/"
@@ -121,37 +124,41 @@ tracked_companies:
 
   # ---- 券商资管 + 公募 ----
   - name: "招商证券"
-    careers_url: "https://career.cmschina.com/"
+    careers_url: "https://cms.hotjob.cn/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["券商", "资管", "市场风险"]
+    notes: "2026-10-21：原 career.cmschina.com 无此主机名。公司在高校宣讲材料中写明的投递站为 cms.hotjob.cn，打开后跳到 hotjob 招聘页。"
 
   - name: "中信证券(华南 / 深圳分公司)"
-    careers_url: "https://www.cs.ecitic.com/newsite/hrzp/"
+    careers_url: "https://careers.citics.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["券商", "投行", "资管"]
-    notes: "总部在北京,深圳子公司 / 华南区设有岗位"
+    notes: "总部在北京,深圳子公司 / 华南区设有岗位 2026-10-21：原 /newsite/hrzp/ 返回 HTTP 404。careers.citics.com 页面标题为「中信证券招聘」。"
 
   - name: "中金深圳子公司"
-    careers_url: "https://career.cicc.com/"
+    careers_url: "https://cicc.zhiye.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["券商", "投行"]
-    notes: "总部在北京,深圳子公司设有岗位"
+    notes: "总部在北京,深圳子公司设有岗位 2026-10-21：原 career.cicc.com 无此主机名。公司招聘说明写明 cicc.zhiye.com，页面标题为「中金公司」。与中金香港共用该站。"
 
   - name: "南方基金"
-    careers_url: "https://www.nffund.com/main/aboutNF/recruit/"
+    careers_url: "https://www.nffund.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["公募基金", "深圳总部"]
 
   # ---- 金融集团 / 银行私行 / 保险 ----
+    notes: "2026-10-21：原 /main/aboutNF/recruit/ 返回 HTTP 404。官网首页标题为「南方基金管理股份有限公司_南方基金官网」。另有高校就业网引用的 hotjob 地址，静态页未能确认机构名，未采用。"
+
   - name: "平安集团"
-    careers_url: "https://pingan.zhiye.com/"
+    careers_url: "https://talent.pingan.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["综合金融", "集团总部"]
+    notes: "2026-10-21：原 pingan.zhiye.com 打开后落到 /404。改为平安公开招聘站 talent.pingan.com。"
 
   - name: "招商银行私人银行"
     careers_url: "https://career.cmbchina.com/"
@@ -160,18 +167,21 @@ tracked_companies:
     tags: ["私行", "财富管理"]
 
   - name: "平安人寿"
-    careers_url: "https://pingan.zhiye.com/"
+    careers_url: "https://talent.pingan.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["保险", "保险金信托源头"]
+    notes: "2026-10-21：原 pingan.zhiye.com 打开后落到 /404。改为平安公开招聘站 talent.pingan.com，与集团条目共用。"
 
   - name: "招商局集团"
-    careers_url: "https://www.cmhk.com/main/c_zp/"
+    careers_url: "https://cmhk.zhiye.com/"
     office_cities: ["深圳", "香港"]
     enabled: true
     tags: ["央企", "综合", "招商系"]
 
   # ---- PE / VC ----
+    notes: "2026-10-21：原 /main/c_zp/ 返回 HTTP 404。cmhk.zhiye.com 页面标题为「招商局集团招聘官网」。"
+
   - name: "深创投"
     careers_url: "https://www.szvc.com.cn/"
     office_cities: ["深圳"]
@@ -192,10 +202,11 @@ tracked_companies:
 
   # ---- 法律 AI ----
   - name: "大疆 - 法律 AI 产品"
-    careers_url: "https://we.dji.com/zh-CN/job"
+    careers_url: "https://careers.dji.com/zh-CN/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["法律 AI PM", "深圳"]
+    notes: "2026-10-21：原 we.dji.com/zh-CN/job 会跳到 careers.dji.com/zh-CN/。"
 
   - name: "腾讯 - 法务 / 合规 / 法律 AI"
     careers_url: "https://careers.tencent.com/"
@@ -205,80 +216,95 @@ tracked_companies:
 
   # ---- 外资银行(香港)----
   - name: "HSBC 汇丰(香港 / 深圳)"
-    careers_url: "https://www.hsbc.com/careers/where-we-hire/china"
+    careers_url: "https://www.hsbc.com/careers"
     office_cities: ["香港", "深圳"]
     enabled: true
     tags: ["外资银行", "外资"]
+    notes: "2026-10-21：原 where-we-hire/china 返回 HTTP 404。汇丰招聘站首页 www.hsbc.com/careers 可打开。"
 
   - name: "Standard Chartered 渣打(香港 / 深圳)"
-    careers_url: "https://www.sc.com/en/careers/"
+    careers_url: "https://www.sc.com/en/global-careers/"
     office_cities: ["香港", "深圳"]
     enabled: true
     tags: ["外资银行"]
+    notes: "2026-10-21：原 /en/careers/ 会跳到 global-careers，改为这个招聘入口。"
 
   - name: "中银香港 BOCHK"
-    careers_url: "https://www.bochk.com/sc/aboutus/careers.html"
+    careers_url: "https://www.bochk.com/en/career.html"
     office_cities: ["香港"]
     enabled: true
     tags: ["中资海外", "香港"]
+    notes: "2026-10-21：原 /sc/aboutus/careers.html 返回 HTTP 404。现招聘页为 /en/career.html，页面标题为 Career。"
 
   - name: "中银国际"
-    careers_url: "https://www.bocigroup.com/careers/"
+    careers_url: "https://www.bocigroup.com/web/Inner/Inner/48"
     office_cities: ["香港"]
     enabled: true
     tags: ["港资", "中资海外"]
+    notes: "2026-10-21：原 /careers/ 会跳回网站首页。/web/Inner/Inner/48 页面标题为「中银国际」，栏目标题为人才招聘。"
 
   - name: "工银亚洲"
-    careers_url: "https://www.icbcasia.com/ICBC/海外分行/工银亚洲网站/CH/AboutUs/Career/"
+    careers_url: "https://www.icbcasia.com/"
     office_cities: ["香港"]
     enabled: true
     tags: ["港资", "中资海外"]
+    notes: "2026-10-21：原带中文路径的 Career 地址返回 HTTP 404。官网首页可打开（标题含中国工商银行（亚洲）），未再核到单独招聘路径。"
 
   - name: "招商永隆银行"
-    careers_url: "https://www.cmbwinglungbank.com/wlbweb/jsp/career/"
+    careers_url: "https://www.cmbwinglungbank.com/wlb_corporate/en/about-us/careers/index.html"
     office_cities: ["香港", "深圳"]
     enabled: true
     tags: ["港资", "招商系"]
 
   # ---- 保险 / 资管(香港)----
+    notes: "2026-10-21：原 /wlbweb/jsp/career/ 返回 HTTP 404。现招聘页标题为 Careers - CMB Wing Lung Bank。"
+
   - name: "AIA Hong Kong 友邦香港"
-    careers_url: "https://www.aia.com.hk/zh-hk/careers.html"
+    careers_url: "https://www.aia.com.hk/en/about-aia/careers"
     office_cities: ["香港"]
     enabled: true
     tags: ["保险", "香港"]
+    notes: "2026-10-21：原 /zh-hk/careers.html 返回 HTTP 404。现页为 AIA Hong Kong Careers。"
 
   - name: "宏利保险 Manulife(香港)"
-    careers_url: "https://www.manulife.com/careers"
+    careers_url: "https://careers.manulife.com/global/en"
     office_cities: ["香港"]
     enabled: true
     tags: ["保险", "外资"]
+    notes: "2026-10-21：原 www.manulife.com/careers 会跳到 careers.manulife.com。"
 
   - name: "保诚保险 Prudential(香港)"
-    careers_url: "https://www.prudential.com.hk/zh-hant/careers/"
+    careers_url: "https://www.prudential.com.hk/en/about-us/work-with-us/corporate-careers/"
     office_cities: ["香港"]
     enabled: true
     tags: ["保险", "外资"]
 
   # ---- 中资海外券商 / 投行(香港)----
+    notes: "2026-10-21：原 /zh-hant/careers/ 返回 HTTP 404。现页标题为 Corporate Careers / Prudential HK。"
+
   - name: "中信证券国际(香港)"
-    careers_url: "https://www.citicsifg.com/"
+    careers_url: "https://www.clsa.com/careers/"
     office_cities: ["香港"]
     enabled: true
     tags: ["券商", "中资海外"]
+    notes: "2026-10-21：原 citicsifg.com 整域不存在。公开招聘页标题为 Careers – CITIC CLSA，与库内中信里昂证券 CLSA 条目相同。"
 
   - name: "中金香港"
-    careers_url: "https://career.cicc.com/"
+    careers_url: "https://cicc.zhiye.com/"
     office_cities: ["香港"]
     enabled: true
     tags: ["券商", "中资海外"]
+    notes: "2026-10-21：原 career.cicc.com 无此主机名。与中金深圳共用 cicc.zhiye.com（页面标题「中金公司」）。"
 
   - name: "海通国际(香港)"
-    careers_url: "https://www.htisec.com/zh-CN/career"
+    careers_url: "https://www.htisec.com/zh-cn/careers"
     office_cities: ["香港"]
     enabled: true
     tags: ["券商", "中资海外"]
 
   # ---- 中资海外资管 / 港资 PE / VC ----
+    notes: "2026-10-21：原 /zh-CN/career 返回 HTTP 404。/zh-cn/careers 页面标题为「海通国际证券集团有限公司 / 人才招聘」。"
+
   - name: "嘉实国际 Harvest Global Investments / HGI"
     careers_url: "https://www.harvestglobal.com.hk/"
     office_cities: ["香港"]
@@ -286,10 +312,11 @@ tracked_companies:
     tags: ["资管", "中资海外", "SFC 1+4+9 持牌", "Pre-IPO"]
 
   - name: "红杉中国香港 Sequoia China HK"
-    careers_url: "https://www.sequoiacap.cn/careers/"
+    careers_url: "https://www.hongshan.com/jobs/"
     office_cities: ["香港"]
     enabled: true
     tags: ["PE / VC", "顶级", "外资"]
+    notes: "2026-10-21：原 sequoiacap.cn/careers/ 无此主机名。hongshan.com/jobs 标题为「工作机会 - 红杉」。页内飞书招聘链接当时返回 404，未采用。机构名未改。"
 
   - name: "上海璞弛(猎头公司,非终端雇主)"
     careers_url: "https://www.liepin.com/a/74797667.shtml"
@@ -303,31 +330,32 @@ tracked_companies:
   # ============================================================
 
   - name: "招商致远资本(招商证券旗下 PE)"
-    careers_url: "https://www.cmsc-pe.com/"
+    careers_url: "https://cmscapital.cmschina.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["券商系 PE", "招商系", "深圳"]
-    notes: "招商证券全资 PE 子公司,母基金 + 直投 + 并购"
+    notes: "招商证券全资 PE 子公司,母基金 + 直投 + 并购 2026-10-21：原 cmsc-pe.com 整域不存在。该公司网站声明官网为 cmscapital.cmschina.com，页面标题为「招商致远资本投资有限公司」。未见单独招聘页。"
 
   - name: "金石投资(中信证券股权投资)"
-    careers_url: "https://www.citics-jinshi.com/"
+    careers_url: "https://www.goldstone-investment.com/"
     office_cities: ["深圳", "北京"]
     enabled: true
     tags: ["券商系 PE", "中信系", "PE 直投"]
-    notes: "中信证券股权投资旗舰平台"
+    notes: "中信证券股权投资旗舰平台 2026-10-21：原 citics-jinshi.com 整域不存在。goldstone-investment.com 页面标题为「中信金石投资有限公司」，文中写明为中信证券全资私募子公司。未见单独招聘页。"
 
   - name: "国信弘盛(国信证券旗下)"
-    careers_url: "https://www.guosenhongsheng.com/"
+    careers_url: "https://hs.guosen.com.cn/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["券商系 PE", "国信系"]
-    notes: "国信证券 PE 子公司,深圳本地化优势"
+    notes: "国信证券 PE 子公司,深圳本地化优势 2026-10-21：原 guosenhongsheng.com 整域不存在。国信证券子公司页面列出的官网为 hs.guosen.com.cn，标题为「国信弘盛」。该站使用旧式 TLS 重协商，部分客户端握手会失败。"
 
   - name: "国君创投(国泰君安创投)"
-    careers_url: "https://www.gtjavc.com/"
+    careers_url: "https://gimcs.com/"
     office_cities: ["深圳", "上海"]
     enabled: true
     tags: ["券商系 PE", "国泰君安系"]
+    notes: "2026-10-21：原 gtjavc.com 整域不存在。gimcs.com 页面标题为「国泰君安投资管理股份有限公司」，但证书已过期。是否与旧称国君创投为同一主体需再核对工商登记；这里只换已打开的公开网址，不改机构名。"
 
   - name: "海通创新资本(海通证券旗下)"
     careers_url: "https://www.htsec.com/"
@@ -365,17 +393,18 @@ tracked_companies:
   # ============================================================
 
   - name: "招银国际 CMB International(招商银行海外旗舰)"
-    careers_url: "https://www.cmbi.com.hk/career/"
+    careers_url: "https://www.cmbi.com.hk/zh-CN/society"
     office_cities: ["香港", "深圳"]
     enabled: true
     tags: ["银行系 PE", "招商系", "中资海外投行 + PE"]
-    notes: "招商银行海外旗舰投行,PE/VC + 投行 + 资管,深港跨境业务核心"
+    notes: "招商银行海外旗舰投行,PE/VC + 投行 + 资管,深港跨境业务核心 2026-10-21：原 /career/ 返回 HTTP 404。/zh-CN/society 页面标题为「社会招聘 - 招银国际金融有限公司」。"
 
   - name: "工银国际 ICBC International"
     careers_url: "https://www.icbci.icbc.com.cn/icbci/en/career/"
     office_cities: ["香港"]
-    enabled: true
+    enabled: false
     tags: ["银行系 PE", "工银系", "中资海外投行"]
+    notes: "2026-10-21：www.icbci.icbc.com.cn 无 A 记录。未核到可替换的官方招聘页，先停用。"
 
   - name: "建银国际 CCBI"
     careers_url: "https://www.ccbintl.com.hk/English/join.html"
@@ -396,10 +425,11 @@ tracked_companies:
     tags: ["银行系", "交行系", "中资海外投行"]
 
   - name: "浦银国际控股(浦发银行海外)"
-    careers_url: "https://www.spdbintl.com/"
+    careers_url: "https://www.spdbi.com/career.html"
     office_cities: ["深圳", "香港"]
     enabled: true
     tags: ["银行系", "浦发系", "中资海外"]
+    notes: "2026-10-21：原 www.spdbintl.com 无此主机名。spdbi.com 首页含「浦银」，/career.html 返回 200。"
 
   - name: "平安银行投行部"
     careers_url: "https://bank.pingan.com/"
@@ -408,11 +438,11 @@ tracked_companies:
     tags: ["银行系", "平安系", "投行业务"]
 
   - name: "中信资本 CITIC Capital(顶级中资 PE)"
-    careers_url: "https://www.citiccapital.com/careers/"
+    careers_url: "https://www.citiccapital.com/"
     office_cities: ["香港", "北京", "深圳"]
     enabled: true
     tags: ["银行系 PE", "中信系", "顶级中资 PE"]
-    notes: "中信集团旗下顶级 PE,跨境投资 + 并购 + 资管全栈"
+    notes: "中信集团旗下顶级 PE,跨境投资 + 并购 + 资管全栈 2026-10-21：原 /careers/ 返回 HTTP 404。公司站首页可打开（标题含 Citic Capital），未见单独招聘页，暂用首页。"
 
   - name: "HSBC GBM Private Equity"
     careers_url: "https://www.hsbc.com/careers/"
@@ -433,17 +463,18 @@ tracked_companies:
     notes: "旗下含嘉实国际 HGI 等海外平台"
 
   - name: "易方达基金(深圳总部)"
-    careers_url: "https://www.efunds.com.cn/recruit/"
+    careers_url: "https://job.efunds.com.cn/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["公募 + 另类", "深圳头部"]
-    notes: "公募头部,深圳总部"
+    notes: "公募头部,深圳总部 2026-10-21：原 /recruit/ 返回 HTTP 404。公司应聘说明写明投递站为 job.efunds.com.cn，打开后跳到 hotjob。"
 
   - name: "博时基金(深圳总部)"
-    careers_url: "https://www.bosera.com/job/index.htm"
+    careers_url: "https://www.bosera.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["公募 + 另类", "招商系"]
+    notes: "2026-10-21：原 /job/index.htm 会跳到官网首页。未见另一份已核验的内地招聘页，暂用首页。博时国际的香港招聘页是另一家主体，未拿来替换。"
 
   - name: "招商基金(深圳总部)"
     careers_url: "https://www.cmfchina.com/"
@@ -471,10 +502,11 @@ tracked_companies:
     tags: ["公募系另类", "博时系"]
 
   - name: "易方达资产管理 HK"
-    careers_url: "https://www.efundhk.com/"
+    careers_url: "https://www.efunds.com.hk/"
     office_cities: ["香港"]
     enabled: true
     tags: ["公募 HK", "易方达系", "中资海外"]
+    notes: "2026-10-21：原 efundhk.com 整域不存在。efunds.com.hk 页面标题为 E Fund Management (Hong Kong) Co., Limited。"
 
   - name: "华夏基金(香港)"
     careers_url: "https://www.chinaamc.com.hk/"
@@ -489,22 +521,23 @@ tracked_companies:
   - name: "国新基金深圳分部"
     careers_url: "https://www.guoxinguotong.com/"
     office_cities: ["深圳", "北京"]
-    enabled: true
+    enabled: false
     tags: ["央企 PE", "国新系"]
+    notes: "2026-10-21：guoxinguotong.com 整域不存在。中国国新控股招聘栏目常见于 crhc.cn，但本环境因 TLS 密码套件和 403 没能打开该页，未采用，先停用。"
 
   - name: "国新国际(国新海外平台)"
     careers_url: "https://www.guoxinguotong.com/"
     office_cities: ["香港"]
-    enabled: true
+    enabled: false
     tags: ["央企 PE 海外", "国新系"]
-    notes: "国新海外平台,跨境业务"
+    notes: "国新海外平台,跨境业务 2026-10-21：guoxinguotong.com 整域不存在。未核到可替换的官方页（crhc.cn 在本环境打不开），先停用。"
 
-  - name: "国调基金(国家级产业基金,半导体 / 集成电路 / 先进制造)"
-    careers_url: "https://www.guodiao.com/"
+  - name: "国调基金(中国国有企业结构调整基金)"
+    careers_url: "https://www.cctfund.cn/cctfund/gywm55/gdjj/index.html"
     office_cities: ["深圳", "北京"]
     enabled: true
-    tags: ["国家级产业基金", "央企", "半导体 + 战新"]
-    notes: "国家半导体大基金的母基金管理人"
+    tags: ["国家级产业基金", "央企"]
+    notes: "2026-10-21：原 guodiao.com 无 A 记录。cctfund.cn 该页标题为「国调基金」，正文为中国国有企业结构调整基金。原备注把它写成国家集成电路产业投资基金管理人，与该页不符，已删，并去掉「半导体 + 战新」标签。此页严格 TLS 校验在本环境失败过一次，页面本身能打开。"
 
   - name: "中投公司海外(China Investment Corporation)"
     careers_url: "https://www.china-inv.cn/"
@@ -522,8 +555,9 @@ tracked_companies:
   - name: "国家集成电路产业基金深圳办(大基金)"
     careers_url: "https://www.gjjcdlcyjj.com/"
     office_cities: ["深圳"]
-    enabled: true
+    enabled: false
     tags: ["国家级产业基金", "半导体", "央企"]
+    notes: "2026-10-21：gjjcdlcyjj.com 整域不存在。检索里出现的华芯资本 huaxcap.com 是另一家机构，不能拿来替换大基金，先停用。"
 
   - name: "诚通基金(中国诚通)"
     careers_url: "https://www.chengtong.cn/"
@@ -538,10 +572,11 @@ tracked_companies:
     tags: ["央企 PE", "战略投资"]
 
   - name: "五矿资本(中国五矿)"
-    careers_url: "https://www.minmetalscapital.com/"
+    careers_url: "https://www.minmetals-finance.com/"
     office_cities: ["深圳", "北京"]
     enabled: true
     tags: ["央企 PE", "矿业 + 资源"]
+    notes: "2026-10-21：原 www.minmetalscapital.com 无此主机名。minmetals-finance.com 页面标题为「五矿资本股份有限公司」。未见单独招聘页。"
 
   - name: "中信集团(深港产业投资)"
     careers_url: "https://www.citic.com/"
@@ -555,23 +590,25 @@ tracked_companies:
   # ============================================================
 
   - name: "深圳市引导基金 / 鲲鹏资本"
-    careers_url: "https://www.kunpengcapital.cn/"
+    careers_url: "https://www.kpcapital.cn/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["政府引导基金", "深圳地方", "母基金"]
-    notes: "深圳市政府引导基金核心管理人"
+    notes: "深圳市政府引导基金核心管理人 2026-10-21：原 kunpengcapital.cn 无此主机名。kpcapital.cn 页面标题为「深圳市鲲鹏股权投资管理有限公司」。未另核到独立的「深圳市引导基金」招聘页。"
 
   - name: "深圳市投控(深圳市投资控股)"
-    careers_url: "https://www.szic.com/"
+    careers_url: "https://www.sihc.com.cn/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["深圳国资", "市级投资平台"]
+    notes: "2026-10-21：原 szic.com 整域不存在。sihc.com.cn 公司简介页自述网址为 www.sihc.com.cn，主体为深圳市投资控股有限公司。同旧域名下的「重大产业基金」和「VC/PE 引导基金」没有核到独立页面，已另停用。"
 
   - name: "远致投资(深圳市国资委直属)"
     careers_url: "https://www.shum-yip.com/"
     office_cities: ["深圳"]
-    enabled: true
+    enabled: false
     tags: ["深圳国资", "市国资委直属"]
+    notes: "2026-10-21：shum-yip.com 整域不存在。未核到远致投资的官方站，先停用。"
 
   - name: "高新投(深圳高新投集团)"
     careers_url: "https://www.szhti.com.cn/"
@@ -588,18 +625,20 @@ tracked_companies:
   - name: "前海管理局相关基金"
     careers_url: "https://www.szqh.gov.cn/"
     office_cities: ["深圳前海"]
-    enabled: true
+    enabled: false
     tags: ["深圳国资", "前海政策性"]
+    notes: "2026-10-21：szqh.gov.cn 整域不存在。qh.sz.gov.cn 有解析但 TLS 失败，未采用，先停用。"
 
   - name: "深圳市重大产业基金"
     careers_url: "https://www.szic.com/"
     office_cities: ["深圳"]
-    enabled: true
+    enabled: false
     tags: ["深圳国资", "战略产业"]
 
   # ============================================================
   # 第 6 类:民营市场化私募(10 家)
   # ============================================================
+    notes: "2026-10-21：szic.com 整域不存在。深投控已另核到 sihc.com.cn，但没有核到「重大产业基金」自己的页面，不把投控首页算作本条，先停用。"
 
   - name: "高瓴 Hillhouse"
     careers_url: "https://www.hillhouseinv.com/careers/"
@@ -627,22 +666,25 @@ tracked_companies:
     tags: ["顶级民营 PE"]
 
   - name: "IDG Capital"
-    careers_url: "https://www.idgcapital.com/careers/"
+    careers_url: "https://career.idgcapital.com/index.html"
     office_cities: ["香港", "北京", "深圳"]
     enabled: true
     tags: ["顶级 VC/PE"]
+    notes: "2026-10-21：原 /careers/ 返回 HTTP 404。career.idgcapital.com 页面标题为 IDG Capital。"
 
   - name: "基石资本(深圳)"
-    careers_url: "https://www.cornerstonecapital.com.cn/"
+    careers_url: "https://stonevc.com/RecruitASage/index.aspx"
     office_cities: ["深圳"]
     enabled: true
     tags: ["民营 PE", "深圳"]
+    notes: "2026-10-21：原 cornerstonecapital.com.cn 整域不存在。stonevc.com 招聘页标题为「基石资产管理股份有限公司」。"
 
   - name: "同创伟业(深圳)"
-    careers_url: "https://www.tcvinvest.com/"
+    careers_url: "http://www.cowincapital.com.cn/index.php?a=recruit&c=index&m=goods"
     office_cities: ["深圳"]
     enabled: true
     tags: ["民营 VC", "深圳"]
+    notes: "2026-10-21：原 tcvinvest.com 整域不存在。cowincapital.com.cn 招聘页标题为「诚聘英才 - 同创伟业」。页面是 http，岗位信息看起来较旧，投递前请再核对。"
 
   - name: "松禾资本(深圳)"
     careers_url: "https://www.songhecapital.com/"
@@ -720,11 +762,11 @@ tracked_companies:
   # ============================================================
 
   - name: "中信信托深圳分部"
-    careers_url: "https://www.citictrust.com/"
+    careers_url: "https://www.citictrust.com.cn/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["信托", "中信系", "深圳分部"]
-    notes: "中信信托深圳分部,信托业务全国第一梯队"
+    notes: "中信信托深圳分部,信托业务全国第一梯队 2026-10-21：原 citictrust.com 无 A 记录。citictrust.com.cn 页面标题为「中信信托」（备案主体为中信信托有限责任公司）。"
 
   - name: "中海信托深圳分部"
     careers_url: "https://www.shctrust.com/"
@@ -742,38 +784,41 @@ tracked_companies:
   - name: "重庆信托深圳分部"
     careers_url: "https://www.chongqingtrust.com/"
     office_cities: ["深圳"]
-    enabled: true
+    enabled: false
     tags: ["信托", "深圳分部"]
 
   # ============================================================
   # 第 9 类:产业投资方 / CVC(8 家)
   # ============================================================
+    notes: "2026-10-21：chongqingtrust.com 整域不存在。cqiti.com 连接超时，未采用，先停用。"
 
   - name: "腾讯投资 Tencent Investment(独立于腾讯法务)"
-    careers_url: "https://www.tencent.com/zh-cn/careers.html"
+    careers_url: "https://careers.tencent.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["CVC", "互联网战投", "腾讯系"]
-    notes: "腾讯投资部独立条线,与法务岗不同"
+    notes: "腾讯投资部独立条线,与法务岗不同 2026-10-21：原 tencent.com/zh-cn/careers.html 返回 HTTP 404。腾讯招聘站为 careers.tencent.com，与库内腾讯法务条目相同；未见投资部单独招聘站。"
 
   - name: "华为哈勃投资(半导体产业基金)"
-    careers_url: "https://career.huawei.com/"
+    careers_url: "https://career.huawei.com/cn"
     office_cities: ["深圳"]
     enabled: true
     tags: ["CVC", "半导体", "华为系"]
-    notes: "华为半导体产业基金"
+    notes: "华为半导体产业基金 2026-10-21：原 career.huawei.com/ 会跳到 /cn。这是华为集团招聘站，不是哈勃单独的招聘页。"
 
   - name: "比亚迪战投"
-    careers_url: "https://www.bydglobal.com/cn/JoinByd.html"
+    careers_url: "https://job.byd.com/portal/pc/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["CVC", "新能源汽车", "比亚迪系"]
+    notes: "2026-10-21：原 /cn/JoinByd.html 返回 HTTP 404。job.byd.com 页面标题为「比亚迪招聘」。这是集团招聘站，不是战投部单独页面。"
 
   - name: "顺丰投资"
-    careers_url: "https://www.sf-express.com/cn/sc/careers/"
+    careers_url: "https://hr.sf-express.com/index.jsp"
     office_cities: ["深圳"]
     enabled: true
     tags: ["CVC", "物流", "顺丰系"]
+    notes: "2026-10-21：原 /cn/sc/careers/ 返回 HTTP 404。hr.sf-express.com 页面标题为「顺丰人才招聘系统首页」。这是集团招聘站。"
 
   - name: "联想创投深圳分部"
     careers_url: "https://www.legendcapital.com.cn/"
@@ -788,13 +833,14 @@ tracked_companies:
     tags: ["CVC", "小米系"]
 
   - name: "中兴投资"
-    careers_url: "https://www.zte.com.cn/china/about/recruitment.html"
+    careers_url: "https://job.zte.com.cn/cn/index.html"
     office_cities: ["深圳"]
     enabled: true
     tags: ["CVC", "通信", "中兴系"]
+    notes: "2026-10-21：原 /china/about/recruitment.html 打开后是 404 页。job.zte.com.cn 页面标题为「中兴通讯招聘」。这是集团招聘站。"
 
   - name: "TCL 创投 / 半导体基金"
-    careers_url: "https://www.tcl.com/cn/zh/careers"
+    careers_url: "https://zhaopin.tcl.com/index.html"
     office_cities: ["深圳", "惠州"]
     enabled: true
     tags: ["CVC", "显示 + 半导体", "TCL 系"]
@@ -802,6 +848,7 @@ tracked_companies:
   # ============================================================
   # 第 10 类:AIC 金融资产投资公司(6 家)— 2024 扩大股权投资试点
   # ============================================================
+    notes: "2026-10-21：原 /cn/zh/careers 返回 HTTP 404。zhaopin.tcl.com 页面标题为「TCL招聘」。这是集团招聘站，不是创投单独页面。"
 
   - name: "工银投资深圳分公司(工银金融资产投资)"
     careers_url: "https://www.icbc.com.cn/icbc/"
@@ -811,10 +858,11 @@ tracked_companies:
     notes: "AIC 三巨头之一"
 
   - name: "农银投资深圳分公司(农银金融资产投资)"
-    careers_url: "https://www.abchina.com/cn/HumanResources/"
+    careers_url: "https://www.abchina.com/cn/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["AIC", "农行系", "债转股 + 股权投资"]
+    notes: "2026-10-21：原 /cn/HumanResources/ 返回 HTTP 404。农业银行官网首页标题为「中国农业银行」。career.abchina.com 只返回标题 Loading 的空壳，未采用。"
 
   - name: "中银资产深圳分公司(中银金融资产投资)"
     careers_url: "https://www.boc.cn/aboutboc/ab8/"
@@ -847,32 +895,35 @@ tracked_companies:
   # ============================================================
 
   - name: "平安资产管理(深圳总部)"
-    careers_url: "https://www.pingan.com/careers/"
+    careers_url: "https://talent.pingan.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["保险资管", "平安系"]
-    notes: "平安资管深圳总部,与平安信托 / 平安银行投行部 协同"
+    notes: "平安资管深圳总部,与平安信托 / 平安银行投行部 协同 2026-10-21：原 www.pingan.com/careers/ 返回 HTTP 404。改为平安公开招聘站 talent.pingan.com。"
 
   - name: "人保资产深圳分公司"
-    careers_url: "https://www.picc.com/recruit/"
+    careers_url: "https://www.picc.com.cn/recruit/"
     office_cities: ["深圳", "北京"]
     enabled: true
     tags: ["保险资管", "人保系"]
+    notes: "2026-10-21：原 picc.com/recruit/ 会跳到 picc.com.cn/recruit/，本环境收到 HTTP 403（更像拦截，不是 404），链接保留为跳转后的地址，未停用。"
 
   - name: "国寿安保资管深圳分公司"
     careers_url: "https://www.cgbac.cn/"
     office_cities: ["深圳", "北京"]
-    enabled: true
+    enabled: false
     tags: ["保险资管", "国寿系"]
+    notes: "2026-10-21：cgbac.cn 整域不存在。未核到国寿安保资管的官方站（不把名称相近的其他国寿机构拿来替换），先停用。"
 
   - name: "太保资产深圳分公司"
-    careers_url: "https://www.cpic.com.cn/careers/"
+    careers_url: "https://www.cpic.com.cn/"
     office_cities: ["深圳", "上海"]
     enabled: true
     tags: ["保险资管", "太保系"]
+    notes: "2026-10-21：原 /careers/ 返回 HTTP 404。官网首页标题含「中国太平洋保险」。未见已核验的单独招聘路径。"
 
   - name: "泰康资产深圳分公司"
-    careers_url: "https://www.taikang.com/talent/"
+    careers_url: "https://www.taikang.com/"
     office_cities: ["深圳", "北京"]
     enabled: true
     tags: ["保险资管", "泰康系"]
@@ -880,12 +931,14 @@ tracked_companies:
   # ============================================================
   # 第 12 类:家办 / 私行扩展(6 家)
   # ============================================================
+    notes: "2026-10-21：原 /talent/ 返回 HTTP 404，job.taikang.com 无此主机名。官网首页标题为「泰康保险集团」。未见已核验的单独招聘路径。"
 
   - name: "平安海外控股(深圳 + HK)"
-    careers_url: "https://www.pingan.com/"
+    careers_url: "https://talent.pingan.com/"
     office_cities: ["深圳", "香港"]
     enabled: true
     tags: ["家办", "私行", "平安系", "跨境"]
+    notes: "2026-10-21：原链接是集团首页而不是招聘页。改为平安公开招聘站 talent.pingan.com。"
 
   - name: "工银私人银行深圳分行"
     careers_url: "https://www.icbc.com.cn/icbc/"
@@ -900,10 +953,11 @@ tracked_companies:
     tags: ["私行", "建行系"]
 
   - name: "HSBC Private Banking HK"
-    careers_url: "https://www.hsbc.com/careers/where-we-hire/asia-pacific/hong-kong-sar"
+    careers_url: "https://www.hsbc.com/careers"
     office_cities: ["香港"]
     enabled: true
     tags: ["私行", "外资", "HK"]
+    notes: "2026-10-21：原 where-we-hire/asia-pacific/hong-kong-sar 返回 HTTP 404。改用汇丰招聘站首页，不是私人银行单独页面。"
 
   - name: "UBS Wealth Management HK"
     careers_url: "https://www.ubs.com/global/en/careers.html"
@@ -946,16 +1000,18 @@ tracked_companies:
     tags: ["REITs", "地产基金", "华润系"]
 
   - name: "万科 BU / 万科基金"
-    careers_url: "https://hr.vanke.com/"
+    careers_url: "https://www.vanke.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["REITs", "地产基金", "万科系"]
+    notes: "2026-10-21：原 hr.vanke.com 无此主机名，job.vanke.com 与 join.vanke.com 同样不存在。www.vanke.com 可打开，但是集团站首页，静态页几乎是脚本，未见单独的基金招聘页。"
 
   - name: "平安不动产"
-    careers_url: "https://www.pingan.com/"
+    careers_url: "https://talent.pingan.com/"
     office_cities: ["深圳"]
     enabled: true
     tags: ["REITs", "地产基金", "平安系"]
+    notes: "2026-10-21：原链接是集团首页而不是招聘页。改为平安公开招聘站 talent.pingan.com。"
 
   - name: "中海地产资管深圳分部"
     careers_url: "https://www.coli.com.hk/"
@@ -983,27 +1039,30 @@ tracked_companies:
   - name: "深圳市天使母基金"
     careers_url: "https://www.szangelfof.com/"
     office_cities: ["深圳"]
-    enabled: true
+    enabled: false
     tags: ["政府引导基金", "深圳", "母基金"]
+    notes: "2026-10-21：szangelfof.com 整域不存在。未核到官方站，先停用。"
 
   - name: "深圳市 VC/PE 引导基金"
     careers_url: "https://www.szic.com/"
     office_cities: ["深圳"]
-    enabled: true
+    enabled: false
     tags: ["政府引导基金", "深圳", "母基金"]
+    notes: "2026-10-21：szic.com 整域不存在。没有核到该引导基金自己的页面，先停用。"
 
   - name: "国家中小企业发展基金深圳办"
     careers_url: "https://www.smefoundation.cn/"
     office_cities: ["深圳", "北京"]
-    enabled: true
+    enabled: false
     tags: ["国家级母基金", "中小企业"]
+    notes: "2026-10-21：smefoundation.cn 整域不存在。未核到官方站，先停用。"
 
   - name: "香港特区政府投资基金 HKIC(Hong Kong Investment Corporation)"
-    careers_url: "https://www.hkic.hk/"
+    careers_url: "https://www.hkic.org.hk/"
     office_cities: ["香港"]
     enabled: true
     tags: ["政府投资基金", "HK 主权", "2024 新成立"]
-    notes: "2024 年新成立的香港特区政府投资基金,定位类似新加坡 GIC,正在搭建团队"
+    notes: "2024 年新成立的香港特区政府投资基金,定位类似新加坡 GIC,正在搭建团队 2026-10-21：原 hkic.hk 证书为自签名。hkic.org.hk 页面标题为 Hong Kong Investment Corporation Limited / HKIC。"
 
 # ============================================================
 # 搜索查询(search_queries)— 招聘平台 site: 过滤

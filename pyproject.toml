@@ -1,0 +1,19 @@
+[project]
+name = "career-ops-finance-cn"
+version = "0.2.0"
+description = "China/HK finance employer pack for career-ops"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["pyyaml>=6"]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.8"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["scripts", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

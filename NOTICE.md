@@ -5,8 +5,9 @@
 ## 上游框架
 
 - **Career-Ops** — by **Santiago Fernández de Valderrama**（[santifer.io](https://santifer.io) · [@santifer](https://x.com/santifer)），MIT License。
-- 求职多智能体流水线本体（scan / apply / pipeline / followup / interview 等 mode 框架）**来自上游**。
-- 请配合上游一起使用；如果本项目对你有用，也欢迎去给 [Career-Ops](https://github.com/santifer/career-ops) 点个 star。
+- 仓库现位于 [career-ops-hq/career-ops](https://github.com/career-ops-hq/career-ops)。`santifer/career-ops` 会跳到这里（2026-10-21 核对）。
+- 求职流水线本体（scan / apply / pipeline / followup / interview 等 mode，以及后来增加的 modes）**来自上游**。
+- 请配合上游一起使用；如果本项目对你有用，也欢迎去给 [Career-Ops](https://github.com/career-ops-hq/career-ops) 点个 star。
 
 ## 本仓的原创新增（同样以 MIT 发布）
 

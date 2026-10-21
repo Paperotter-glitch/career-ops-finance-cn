@@ -70,6 +70,17 @@ cover_letter:
   primary_domain: "金融法律 / 合规"      # 你当前领域,用于识别与 JD 的领域差
   # 中英求职一般不需要;投小语种外资岗再加 language_learning
 
+language:
+  # 2026-10-21 对齐 career-ops-hq/career-ops 的 config/profile.example.yml。
+  # output: zh-CN 让报告、求职信和 PDF 走中文，并启用中文排版。
+  # modes_dir 选择内地市场规则。modes/zh/README.md 仍示例 language.primary，
+  # 那个键和 profile 示例里的 output 不是同一个，以 profile.example.yml 为准。
+  output: zh-CN
+  modes_dir: modes/zh
+
+# 中国求职用 A4。上游缺省是 letter，不写这个键就会出 letter。
+page_format: a4
+
 # —— 中国平台相关（可选）——
 # BOSS 直聘"打招呼"有 150 字上限,career-ops 的 greeting 会据此裁剪:
 # outreach:

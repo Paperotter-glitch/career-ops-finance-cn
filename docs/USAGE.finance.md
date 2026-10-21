@@ -1,9 +1,11 @@
 # 金融版用法说明
 
-本仓是 [Career-Ops](https://github.com/santifer/career-ops) 的**金融配置包**，不是独立程序。
+本仓是 [Career-Ops](https://github.com/career-ops-hq/career-ops) 的**金融配置包**，不是独立程序。`santifer/career-ops` 会跳到该仓库。
 
 ## 1. 先装 career-ops
-按上游 README 装好框架（Node / Go），跑通它的示例。
+按上游 README 装好框架（Node，以及它自带的 Go dashboard），跑通它的示例。
+
+上游仓库现在在 [career-ops-hq/career-ops](https://github.com/career-ops-hq/career-ops)。`santifer/career-ops` 会 301 到那里。
 
 ## 2. 套上金融配置
 ```bash
@@ -26,3 +28,18 @@ cp config/profile.finance-cn.example.yml  <career-ops>/config/profile.yml   # �
 
 ## 5. ⚠️ 隐私铁律
 `config/profile.yml`、`cv.md`、`data/` 已被 `.gitignore` 排除——**永远不要提交你的真实个人数据**。只提交 `*.example` / `*.template`。
+
+## 6. 和上游的兼容（2026-10-21 核对）
+
+本仓仍是配置包。复制路径没变：`portals.finance-cn.yml` → 上游 `portals.yml`，profile 示例 → `config/profile.yml`。
+
+对照过当天 `main` 上的 `validate-portals.mjs`、`templates/portals.example.yml`、`config/profile.example.yml` 和 `modes/zh/README.md`：
+
+- 启用中的公司要有非空 `name` 和绝对 `careers_url`。`enabled` 必须是布尔值；只有 `false` 会让上游跳过该公司。本仓用它标记没核到招聘链接的 12 家，条目还在。
+- `office_cities`、`tags`、`notes` 是本仓自己的字段。上游校验器不认识它们，也不会因为这些字段报错。
+- `title_filter.positive` / `negative` / `seniority_boost` 和上游示例是同一种列表。
+- 个人配置的语言键以 `config/profile.example.yml` 为准：`language.output: zh-CN`（中文输出，并启用中文 PDF 排版），`language.modes_dir: modes/zh`（内地市场模式）。`modes/zh/README.md` 里仍写着 `language.primary`，和 profile 示例不是同一个键。
+- 中国简历用 A4。上游不写 `page_format` 时默认 letter，所以 profile 示例里写了 `page_format: a4`。
+- 上游模式比本页表格里的 scan / apply / pipeline / interview-prep / followup 多。这五类会直接吃到雇主库和 profile；其余模式以上游文档为准，本仓没有各写一份。
+
+雇主库改完可以用上游的 `node validate-portals.mjs --file portals.yml` 再对一次。本仓的 `python scripts/check_portals.py` 只检查这份金融配置自己的字段。
