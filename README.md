@@ -10,14 +10,14 @@
 
 <img src="docs/demo.svg" width="680" alt="扫 134 家金融机构 → A-F 打分 → 筛出对口岗位 → 生成投递草稿">
 
-[![Built on Career-Ops ⭐57k](https://img.shields.io/badge/built%20on-Career--Ops%20%E2%AD%9057k-000?logo=github&logoColor=white)](https://github.com/santifer/career-ops)
+[![career-ops](https://img.shields.io/github/stars/career-ops-hq/career-ops?style=flat&label=career-ops&logo=github)](https://github.com/career-ops-hq/career-ops)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![雇主库](https://img.shields.io/badge/%E9%9B%87%E4%B8%BB%E5%BA%93-134%E5%AE%B6%20%C2%B7%2014%E7%B1%BB-e8b04b)
-![岗位词典](https://img.shields.io/badge/%E5%B2%97%E4%BD%8D%E8%AF%8D%E5%85%B8-76%2B%E8%AF%8D-5cc2a8)
+![雇主库](https://img.shields.io/badge/%E9%9B%87%E4%B8%BB%E5%BA%93-134%E5%AE%B6-e8b04b)
+![岗位词典](https://img.shields.io/badge/%E5%B2%97%E4%BD%8D%E8%AF%8D-54%20%2F%2013%20%2F%209-5cc2a8)
 ![数据](https://img.shields.io/badge/%E6%95%B0%E6%8D%AE-%E5%8F%AF%E5%AF%BC%E5%87%BA%20%C2%B7%20%E6%B0%B8%E4%B8%8D%E4%B8%8A%E4%BA%91-8957e5)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-**简体中文** · English（WIP）
+**简体中文** · [English](README.en.md)
 
 </div>
 
@@ -30,12 +30,12 @@
 
 ## 这是什么
 
-[Career-Ops](https://github.com/santifer/career-ops)（**57k⭐** 的开源 AI 求职系统）本身很强——但它**不懂中国金融圈**：不知道某头部信托在招什么、某券商系 PE 的 careers 页在哪、"投资法务"这种岗位该怎么筛。
+[Career-Ops](https://github.com/career-ops-hq/career-ops) 是开源的 AI 求职系统（旧地址 [santifer/career-ops](https://github.com/santifer/career-ops) 会跳到这里）。它本身不带中国金融圈的雇主和岗位词：不知道某家信托的招聘页在哪，也不知道「投资法务」该怎么筛。
 
 **Career-Ops Finance-CN 把它武装成懂中国私募 / 金融行业的样子：**
 
-- 📇 **134 家机构雇主库**（14 大类）—— 每家带 careers 链接、办公城市、行业标签
-- 🎯 **中英双语岗位筛选词典**（76+ 正向词）—— 投资法务 / 合规 / 风控 / 投资 / 研究 …
+- 📇 **134 家机构雇主库** —— 每家带 careers 链接、办公城市、行业标签。2026-10-21 核链接之后，**停用 12 家**（`enabled: false`，仍留在库里）
+- 🎯 **中英双语岗位筛选词典：正向 54、排除 13、资历加权 9** —— 投资法务 / 合规 / 风控，外加少量相邻词。三列加总是 76，不是 76 个正向词
 - 🀄 **中文金融求职 & 面试模式** + 金融方向 Profile 模板
 
 > 一句话：**career-ops 是引擎，这里是给中国金融人的燃料。**
@@ -49,19 +49,30 @@
 
 ## 🗺️ 覆盖版图 —— 别处没有的东西
 
-> 134 家 · 14 类，从券商系 PE 到国家级母基金，一张中国私募 / 另类投资的求职地图。
+下面的家数由 `scripts/check_portals.py` 按现有 `tags` 归类，CI 会核对，不是另做的一套分类。加总为 134。
 
-| 类别 | 家数 | · | 类别 | 家数 |
-|---|:--:|:--:|---|:--:|
-| 券商系私募 | 9 | · | 外资私募 | 8 |
-| 银行系私募 | 9 | · | 信托公司（深圳分部）| 4 |
-| 公募系私募 | 9 | · | 产业投资 / CVC | 8 |
-| 国资 / 央企私募 | 10 | · | AIC 金融资产投资 | 6 |
-| 深圳地方私募 | 7 | · | 保险资管系 | 5 |
-| 民营市场化私募 | 10 | · | 家办 / 私行 | 6 |
-| REITs / 地产基金 | 7 | · | 政府引导 / 母基金 | 4 |
+| 类别 | 家数 |
+|---|---:|
+| 国资 / 央企 / 政府平台 | 18 |
+| 券商 / 券商系 | 15 |
+| 外资机构 | 12 |
+| 市场化 PE / VC | 12 |
+| 公募 / 公募系 | 10 |
+| 家办 / 私行 | 9 |
+| 银行 / 银行系 | 9 |
+| 产业投资 / CVC | 8 |
+| REITs / 地产基金 | 7 |
+| 其他 | 7 |
+| AIC 金融资产投资 | 6 |
+| 信托 | 6 |
+| 保险资管 | 5 |
+| 政府引导 / 母基金 | 5 |
+| 保险 | 4 |
+| 猎头（非终端雇主） | 1 |
 
-**覆盖城市：深圳 · 香港**（主战场）+ 北京 · 上海。 每家都在核验来源与更新日期（见 [贡献](#-一起把它做全)）。
+「其他」是标签对不上上面类目的 7 家：平安集团、大疆（法律 AI）、腾讯（法务 / 合规）、中银香港、中银国际、工银亚洲、嘉实国际。
+
+**覆盖城市：深圳 · 香港**（主战场）+ 北京 · 上海。2026-10-21 的链接核验见 [docs/link-audit-2026-10-21.md](docs/link-audit-2026-10-21.md)。不是每条都有独立来源链接。
 
 ## ⚡ 怎么用
 
@@ -106,7 +117,7 @@ cp config/profile.finance-cn.example.yml  <career-ops>/config/profile.yml   # �
 
 - 🏢 **补一家机构** / 🔗 **报个失效链接** / 🏷️ **补岗位词** → 提 [Issue](https://github.com/Paperotter-glitch/career-ops-finance-cn/issues/new/choose) 或 PR（一次一家，评审快）
 - 🎉 **用它拿到金融 offer 了？** 开个 Issue 分享你的故事（可匿名），帮下一个人
-- 📋 每条数据都带 `来源` 和 `核验日期`，CI 自动查死链——欢迎帮我们守住"新鲜度"
+- 📋 招聘链接以 [2026-10-21 审计](docs/link-audit-2026-10-21.md) 为准。PR 会跑字段校验、单元测试和 lint；活链接检查会把启用中的确认死链（HTTP 404/410 或 DNS 无记录）标成失败。403、超时和证书错误只报告，不当成死链
 
 ## 💬 社区 & 免费资料
 
@@ -120,6 +131,6 @@ cp config/profile.finance-cn.example.yml  <career-ops>/config/profile.yml   # �
 
 ## 🙏 致谢 & License
 
-构建于 **[Career-Ops](https://github.com/santifer/career-ops)** by [@santifer](https://x.com/santifer)（MIT）—— 感谢开源。若本项目对你有用，也去给上游点个 star。本仓同样以 **MIT** 发布，详见 [NOTICE.md](NOTICE.md)。
+构建于 **[Career-Ops](https://github.com/career-ops-hq/career-ops)** by [@santifer](https://x.com/santifer)（MIT）。旧地址 `santifer/career-ops` 会跳到这个仓库。若本项目对你有用，也去给上游点个 star。本仓同样以 **MIT** 发布，详见 [NOTICE.md](NOTICE.md)。变更记录见 [CHANGELOG.md](CHANGELOG.md)。
 
 > ⚠️ 雇主库仅供求职参考；招聘信息以各机构官方渠道为准。数据均来自公开渠道，不含任何非公开信息。

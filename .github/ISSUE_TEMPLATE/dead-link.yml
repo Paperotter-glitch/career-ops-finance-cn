@@ -1,0 +1,33 @@
+name: 链接失效
+description: 某家机构的招聘链接打不开，或已经换到新的官方页面
+title: "[链接] "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请只填公开信息。找到新的官方页面就贴上；没找到就留空，不要猜一个域名。
+  - type: input
+    id: name
+    attributes:
+      label: 机构名称（与 portals.finance-cn.yml 里一致）
+    validations:
+      required: true
+  - type: input
+    id: old_url
+    attributes:
+      label: 现在库里的链接
+    validations:
+      required: true
+  - type: input
+    id: new_url
+    attributes:
+      label: 你打开过的新官方页面（没有就留空）
+      placeholder: https://...
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 你怎么确认的
+      description: 例如 HTTP 状态、页面标题、机构自己写的招聘入口。不要贴个人简历或内推联系人。
+    validations:
+      required: true

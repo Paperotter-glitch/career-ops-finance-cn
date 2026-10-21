@@ -33,4 +33,23 @@
 - 机构条目里**不要**写任何个人化批注（"我投过""前东家""内推路径"等）。
 
 ## 四、行为准则
-友善、就事论事。数据类分歧以"能否公开核验"为准。
+
+友善、就事论事。数据类分歧以「能否公开核验」为准。完整文本见 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。安全问题走 [SECURITY.md](SECURITY.md)，不要把简历或 token 发到公开 Issue。
+
+## 五、改完怎么自测
+
+```bash
+python -m pip install -r requirements-dev.txt
+ruff check scripts tests
+python -m unittest discover -s tests -v
+python scripts/check_portals.py
+python scripts/check_portals.py --write-tracker   # 改了雇主库才需要
+```
+
+`enabled: false` 的机构必须有 `notes`。不要编造招聘链接：打不开、又找不到机构自己的页面，就停用并写原因。
+
+PR 上的 GitHub Actions 会跑 lint、单元测试、schema，以及活链接检查。启用中的确认死链（HTTP 404/410 或 DNS 无记录）会让检查失败；403、超时和证书错误只会记在日志里。
+
+## English
+
+Contributions are data fixes and short docs. One firm per pull request. A careers URL has to be a page you opened. If you cannot find an official page, set `enabled: false` and explain that in `notes`. Do not commit a real profile or CV. Run the commands in section 五 before opening a PR. The code of conduct is [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
